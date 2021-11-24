@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { background, man } from "../../assets";
 import Button from "../../components/Button";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import InputMask from "react-input-mask";
 import {
   ContentForm,
   SubTitle,
@@ -14,6 +15,9 @@ import {
 } from "./style";
 
 const Home: React.FC = () => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+
   return (
     <>
       <Header />
@@ -51,11 +55,22 @@ const Home: React.FC = () => {
           <Form>
             <div>
               <label>Nome Completo</label>
-              <input type="text" placeholder="Ex: Lorem Ipsum" />
+              <input
+                type="text"
+                placeholder="Ex: Lorem Ipsum"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
             </div>
             <div>
               <label>Whatsapp</label>
-              <input type="text" placeholder="(99) 99999-9999" />
+              <InputMask
+                mask="(99) 99999-9999"
+                type="text"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                placeholder="(99) 99999-9999"
+              />
             </div>
             <Button color="Green">Peça uma reunião</Button>
           </Form>

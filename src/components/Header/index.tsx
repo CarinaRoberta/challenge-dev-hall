@@ -7,13 +7,13 @@ const Header: React.FC = () => {
     <Container>
       <h1>MeuFreela</h1>
       <SocialNetwork>
-        <a href="">
+        <a href="https://www.linkedin.com/">
           <GrLinkedinOption size={30} color={"white"} />
         </a>
-        <a href="">
+        <a href="https://www.instagram.com/">
           <GrInstagram size={25} color={"white"} />
         </a>
-        <a href="">
+        <a href="https://twitter.com/">
           <GrTwitter size={25} color={"white"} />
         </a>
       </SocialNetwork>
