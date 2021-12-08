@@ -17,7 +17,10 @@ const Container = styled.div`
 const SocialNetwork = styled.div`
   a {
     padding-left: 20px;
-
+    transition: all 0.2s ease;
+    &:hover {
+      filter: brightness(0.5);
+    }
   }
 `;
 

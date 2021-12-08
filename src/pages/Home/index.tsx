@@ -23,7 +23,7 @@ const Home: React.FC = () => {
       <Header />
       <Head>
         <div className="wrapper">
-          <img src={background} alt="" />
+          <img src={background} alt="Background" />
           <div className="content-info">
             <span>Desenvolvedores prontos para ação</span>
             <h1>Seu projeto pronto na velocidade da luz</h1>
@@ -44,7 +44,7 @@ const Home: React.FC = () => {
               </p>
             </Text>
           </div>
-          <img src={man} alt="" />
+          <img src={man} alt="Homem" />
         </About>
         <div className="separator"></div>
         <ContentForm>

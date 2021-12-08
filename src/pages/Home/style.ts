@@ -21,15 +21,37 @@ const Head = styled.div`
   .content-info {
     position: absolute;
     top: 30px;
-    padding: 240px 60px;
+    padding: 240px 40px;
   }
+
   img {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 950px;
+    height: calc(100vh - 80px);
     width: 100%;
+    object-fit: cover;
     filter: brightness(0.1);
+  }
+
+  @media only screen and (max-width: 325px) {
+    img {
+      height: calc(100vh - 120px) !important;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .content-info {
+      padding: 30px 40px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    img {
+      height: calc(100vh - 300px);
+    }
   }
 `;
 
@@ -52,6 +74,13 @@ const About = styled.div`
   margin: 40px 0 0 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 20px;
+
+  @media only screen and (max-width: 800px) {
+    align-items: center;
+    justify-content: center;
+  }
 
   div {
     display: flex;
@@ -62,14 +91,21 @@ const About = styled.div`
     width: 200px;
     height: 250px;
     margin-left: 140px;
+    @media only screen and (max-width: 768px) {
+      margin-left: 50px;
+    }
   }
 `;
 
 const ContentForm = styled.div`
-  padding: 50px 0;
+  padding: 50px 20px;
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+
+  @media only screen and (max-width: 768px) {
+    padding: 10px 20px;
+  }
 `;
 
 const Form = styled.div`
@@ -103,6 +139,21 @@ const Form = styled.div`
       padding: 8px;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    button {
+      width: 96%;
+    }
+    div {
+      width: 100%;
+      label {
+        margin-top: 8px;
+      }
+      input {
+        width: 100%;
+      }
+    }
+  }
 `;
 
 const SubTitle = styled.h2`
@@ -120,7 +171,12 @@ const Text = styled.span`
 
   p {
     max-width: 395px;
-    margin-top: 20px;
+    margin-top: 10px;
+
+    @media only screen and (max-width: 791px) {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
   }
 `;
 
